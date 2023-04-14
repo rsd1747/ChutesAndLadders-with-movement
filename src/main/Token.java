@@ -300,9 +300,9 @@ public int getSpace(){
     }
     return coordinateSeekerSpace;
 }
-
-public int getXOfSpace(int space){
-    if ('a' == this.initial){
+  
+public int getSpaceX(int space){
+    if ('a' == this.initial || 'c' == this.initial){
         if (1 <= space && space <= 10){
             return 2 + 6 * (space - 1);
         } else if (11 <= space && space <= 20){
@@ -324,7 +324,7 @@ public int getXOfSpace(int space){
         } else if (91 <= space && space <= 100){
             return 56 - 6 * (space-91);
         }
-    } else if ('b' == this.initial){
+    } else if ('b' == this.initial || 'd' == this.initial){
         if (1 <= space && space <= 10){
             return 4 + 6 * (space - 1);
         } else if (11 <= space && space <= 20){
@@ -346,15 +346,53 @@ public int getXOfSpace(int space){
         } else if (91 <= space && space <= 100){
             return 58 - 6 * (space-91);
         }
-    } else if ('c' == this.initial){
-        
-    } else if ('d' == this.initial){
-        
     }
-    return 10;
 }
 
 public int getSpaceY(int space){
-    return 10;
-}
+    if('a' == this.initial || 'b' == this.initial){
+        if (1 <= space && space <= 10){
+            return 29;
+        } else if (11 <= space && space <= 20){
+            return 26;
+        } else if (21 <= space && space <= 30){
+            return 23;
+        } else if (31 <= space && space <= 40){
+            return 20;
+        } else if (41 <= space && space <= 50){
+            return 17;
+        } else if (51 <= space && space <= 60){
+            return 14;
+        } else if (61 <= space && space <= 70){
+            return 11;
+        } else if (71 <= space && space <= 80){
+            return 8;
+        } else if (81 <= space && space <= 90){
+            return 5;
+        } else if (91 <= space && space <= 100){
+            return 2;
+        }
+    } else if ('c' == this.initial || 'd' == this.initial){
+        if (1 <= space && space <= 10){
+            return 30;
+        } else if (11 <= space && space <= 20){
+            return 27;
+        } else if (21 <= space && space <= 30){
+            return 24;
+        } else if (31 <= space && space <= 40){
+            return 21;
+        } else if (41 <= space && space <= 50){
+            return 18;
+        } else if (51 <= space && space <= 60){
+            return 15;
+        } else if (61 <= space && space <= 70){
+            return 12;
+        } else if (71 <= space && space <= 80){
+            return 9;
+        } else if (81 <= space && space <= 90){
+            return 6;
+        } else if (91 <= space && space <= 100){
+            return 3;
+        }
+    }
 }

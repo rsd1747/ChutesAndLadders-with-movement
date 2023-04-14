@@ -1,4 +1,15 @@
 /*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package chutes;
+
+/**
+ *
+ * @author rsdunn
+ */
+/**
  * Token will create player objects that are then passed to Board() to draw the Chutes and Ladders playspace.
  */
 public class Token{
@@ -288,5 +299,62 @@ public int getSpace(){
         }
     }
     return coordinateSeekerSpace;
+}
+
+public int getXOfSpace(int space){
+    if ('a' == this.initial){
+        if (1 <= space && space <= 10){
+            return 2 + 6 * (space - 1);
+        } else if (11 <= space && space <= 20){
+            return 56 - 6 * (space - 11);
+        } else if (21 <= space && space <= 30){
+            return 2 + 6 * (space - 21);
+        } else if (31 <= space && space <= 40){
+            return 56 - 6 * (space - 31);
+        } else if (41 <= space && space <= 50){
+            return 2 + 6 * (space - 41);
+        } else if (51 <= space && space <= 60){
+            return 56 - 6 * (space-51);
+        } else if (61 <= space && space <= 70){
+            return 2 + 6 * (space - 61);
+        } else if (71 <= space && space <= 80){
+            return 56 - 6 * (space-71);
+        } else if (81 <= space && space <= 90){
+            return 2 + 6 * (space - 81);
+        } else if (91 <= space && space <= 100){
+            return 56 - 6 * (space-91);
+        }
+    } else if ('b' == this.initial){
+        if (1 <= space && space <= 10){
+            return 4 + 6 * (space - 1);
+        } else if (11 <= space && space <= 20){
+            return 58 - 6 * (space - 11);
+        } else if (21 <= space && space <= 30){
+            return 4 + 6 * (space - 21);
+        } else if (31 <= space && space <= 40){
+            return 58 - 6 * (space - 31);
+        } else if (41 <= space && space <= 50){
+            return 4 + 6 * (space - 41);
+        } else if (51 <= space && space <= 60){
+            return 58 - 6 * (space-51);
+        } else if (61 <= space && space <= 70){
+            return 4 + 6 * (space - 61);
+        } else if (71 <= space && space <= 80){
+            return 58 - 6 * (space-71);
+        } else if (81 <= space && space <= 90){
+            return 4 + 6 * (space - 81);
+        } else if (91 <= space && space <= 100){
+            return 58 - 6 * (space-91);
+        }
+    } else if ('c' == this.initial){
+        
+    } else if ('d' == this.initial){
+        
+    }
+    return 10;
+}
+
+public int getSpaceY(int space){
+    return 10;
 }
 }

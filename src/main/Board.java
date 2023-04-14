@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package chutes;
 /**
  * Board allows a user to draw a Chutes and Ladders playspace and its players with a single command.
  **/
@@ -207,6 +208,7 @@ public Board(int dimension, int playerCount, Token p1, Token p2, Token p3, Token
       }
       break;
 }
+  
 }
 /********************************
  *                              *
@@ -238,5 +240,9 @@ public static void main(String[] args){
     System.out.println("Player 2 is on space: " + player2.getSpace());
     System.out.println("Player 3 is on space: " + player3.getSpace());
     System.out.println("Player 4 is on space: " + player4.getSpace());
+    
+    System.out.println(player1.getSpace());
+    System.out.println(player1.getPlayerX());
+    System.out.println(player1.getXOfSpace(12));
   }
 }
